@@ -1,0 +1,47 @@
+:root {
+  /******** colors ********/
+  --root-primary-color: #00a298;
+
+  /* color scale: 1-9 */
+  --root-primary-color-3: rgba(0, 162, 152, 0.08);
+  --root-primary-color-4: rgba(0, 162, 152, 0.4);
+  --root-primary-color-5: var(--root-primary-color);
+
+  --root-error-color: #e55252;
+  --root-black-color: #222;
+  --root-white-color: #fff;
+
+  /******** typography ********/
+  --root-font-family: 'Roboto', sans-serif;
+  --root-font-weight-normal: 300;
+
+  /******** buttons ********/
+  --root-button-border-radius: 8px;
+}
+
+html ::selection,
+body ::selection {
+  background: var(--root-primary-color) !important;
+  color: var(--root-black-color) !important;
+}
+
+body {
+  font-family: var(--root-font-family);
+  font-weight: var(--root-font-weight-normal);
+  color: var(--root-black-color);
+
+  --loading-spinner-color: var(--root-primary-color);
+  /* --loading-spinner-size: 24px;
+  --loading-spinner-thickness: 2px; */
+}
+
+.material {
+  --button-background-color: var(--root-primary-color);
+  --button-color: var(--root-white-color);
+  --button-border-radius: var(--root-button-border-radius);
+
+  --button-hover-color: var(--root-primary-color);
+  --button-hover-background-color: var(--root-primary-color-3);
+  --button-disabled-background-color: var(--root-primary-color);
+  --button-disabled-color: var(--root-white-color);
+}
