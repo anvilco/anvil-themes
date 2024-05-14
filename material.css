@@ -56,7 +56,11 @@
   --button-disabled-color: var(--root-white-color);
 
   /******** fields ********/
-  --field-error-color: var(--root-error-color);
+  --field-error-color: transparent;
+  --field-error-text-color: var(--root-error-color);
+  --field-error-box-shadow: none;
+  --field-error-background: transparent;
+  --field-label-font-weight: 300;
   /* TODO: add help, label, optional vars */
 
   /******** field inputs ********/
@@ -66,7 +70,9 @@
   --field-input-hover-border-color: var(--root-primary-color);
   --field-input-focus-border-color: var(--root-primary-color);
   --field-input-focus-box-shadow: none;
-  --field-label-font-weight: 300;
+  --field-input-padding-x: 0;
+  /* --field-input-padding-y: 0; */
+
 
   /******** dropdown selector: the same as field inputs, but for dropdowns ********/
   --dropdown-selector-background-color: transparent;
@@ -75,6 +81,9 @@
   --dropdown-selector-hover-border-color: var(--root-primary-color);
   --dropdown-selector-focus-border-color: var(--root-primary-color);
   --dropdown-selector-focus-box-shadow: none;
+  --dropdown-selector-padding-x: 0;
+  --dropdown-selector-padding-y: 0;
+
 
   /******** dropdown ********/
   --dropdown-option-active-background-color: var(--root-primary-color-4);
@@ -153,7 +162,14 @@ body {
     flex-direction: column;
   }
 
-  .anvil-field-content-container .anvil-field-help-label {
+  /* the double .anvil-field-help-label is to increase specificity without using !important */
+  /* we use ant-form-item-has-error to target only error fields. will change to anvil-field-has-error in the future */
+  .ant-form-item-has-error .anvil-field-content-container .anvil-field-help-label {
     order: 2;
+    position: relative;
+    margin-top: 6px;
+    text-align: left;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
