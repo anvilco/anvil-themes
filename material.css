@@ -14,6 +14,8 @@
   --root-white-color: #fff;
   --root-link-color: #0185a2;
   --root-link-hover-color: #00a298;
+  --root-green-color: #2ed27c;
+  --root-green-color-4: rgba(46, 210, 124, 0.4);
 
   /******** typography ********/
   --root-font-family: "Roboto", sans-serif;
@@ -71,8 +73,7 @@
   --field-input-focus-border-color: var(--root-primary-color);
   --field-input-focus-box-shadow: none;
   --field-input-padding-x: 0;
-  /* --field-input-padding-y: 0; */
-
+  /* padding-y is not supported right now - use selectors to target elements you want for padding top/bottom */
 
   /******** dropdown selector: the same as field inputs, but for dropdowns ********/
   --dropdown-selector-background-color: transparent;
@@ -82,8 +83,6 @@
   --dropdown-selector-focus-border-color: var(--root-primary-color);
   --dropdown-selector-focus-box-shadow: none;
   --dropdown-selector-padding-x: 0;
-  --dropdown-selector-padding-y: 0;
-
 
   /******** dropdown ********/
   --dropdown-option-active-background-color: var(--root-primary-color-4);
@@ -114,6 +113,23 @@
   --date-picker-days-of-week-font-style: italic;
   --date-picker-days-of-week-font-weight: 600;
 
+  /******** dropzone ********/
+  --dropzone-border: 2px dashed var(--root-primary-color-4);
+  --dropzone-active-border: 2px dashed var(--root-primary-color);
+  --dropzone-accept-border: 2px dashed var(--root-green-color);
+  --dropzone-accept-background-color: var(--root-green-color-4);
+  --dropzone-reject-border: 2px dashed var(--root-error-color);
+
+  --dropzone-error-text-color: var(--root-error-color);
+
+  /******** dropzone supported selectors ********/
+  /* there are more, but these are only on certain drag and drop states */
+  /* they are here for easier reference. you can target anything within the dropzone for these states using these classes */
+  /* - `.anvil-dropzone-drop-active` */
+  /* - `.anvil-dropzone-drop-accept` */
+  /* - `.anvil-dropzone-drop-reject` */
+  /* - `.anvil-dropzone-drop-disabled` */
+
   /******** loading spinner ********/
   --loading-spinner-color: var(--root-primary-color);
   --loading-spinner-size: 24px;
@@ -127,8 +143,6 @@
   --checkbox-check-hover-border: 2px solid red;
   --checkbox-border-radius: 50%;
   /* --option-field-uncheck-hover-border: 1px solid var(--root-primary-color-4); */
-
-  
 }
 
 html ::selection,
@@ -164,12 +178,24 @@ body {
 
   /* the double .anvil-field-help-label is to increase specificity without using !important */
   /* we use ant-form-item-has-error to target only error fields. will change to anvil-field-has-error in the future */
-  .ant-form-item-has-error .anvil-field-content-container .anvil-field-help-label {
+  .ant-form-item-has-error
+    .anvil-field-content-container
+    .anvil-field-help-label {
     order: 2;
     position: relative;
     margin-top: 6px;
     text-align: left;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .anvil-dropzone-upload-button {
+    background-color: var(--root-primary-color-3);
+    color: var(--root-primary-color);
+  }
+
+  .anvil-dropzone-upload-button:hover {
+    color: var(--root-white-color);
+    background-color: var(--root-primary-color);
   }
 }
