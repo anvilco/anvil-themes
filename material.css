@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap");
+
 :root {
   /******** colors ********/
   --root-primary-color: #00a298;
@@ -12,11 +14,51 @@
   --root-white-color: #fff;
 
   /******** typography ********/
-  --root-font-family: 'Roboto', sans-serif;
+  --root-font-family: "Roboto", sans-serif;
   --root-font-weight-normal: 300;
 
   /******** buttons ********/
   --root-button-border-radius: 8px;
+
+  /************************************************
+  ****** apply the root values to components ****** 
+  /************************************************/
+
+  /******** typography ********/
+  font-family: var(--root-font-family);
+  font-weight: var(--root-font-weight-normal);
+  color: var(--root-black-color);
+
+  /******** button ********/
+  --button-background-color: var(--root-primary-color);
+  --button-color: var(--root-white-color);
+  --button-border-radius: var(--root-button-border-radius);
+
+  --button-hover-color: var(--root-primary-color);
+  --button-hover-background-color: var(--root-primary-color-3);
+  --button-disabled-background-color: var(--root-primary-color);
+  --button-disabled-color: var(--root-white-color);
+
+  /******** fields ********/
+  --field-error-color: var(--root-error-color);
+
+  /******** field inputs ********/
+  --field-input-background-color: transparent;
+  --field-input-border: none;
+  --field-input-border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  --field-input-hover-border-color: var(--root-primary-color);
+  --field-input-focus-border-color: var(--root-primary-color);
+  --field-input-focus-box-shadow: none;
+
+  /******** date picker ********/
+  --date-picker-hover-background: var(--root-primary-color-4);
+  --date-picker-today-hover-background: var(--root-primary-color);
+  --date-picker-today-hover-color: var(--root-white-color);
+
+  /******** loading spinner ********/
+  --loading-spinner-color: var(--root-primary-color);
+  --loading-spinner-size: 24px;
+  --loading-spinner-thickness: 2px;
 }
 
 html ::selection,
@@ -27,21 +69,4 @@ body ::selection {
 
 body {
   font-family: var(--root-font-family);
-  font-weight: var(--root-font-weight-normal);
-  color: var(--root-black-color);
-
-  --loading-spinner-color: var(--root-primary-color);
-  /* --loading-spinner-size: 24px;
-  --loading-spinner-thickness: 2px; */
-}
-
-.material {
-  --button-background-color: var(--root-primary-color);
-  --button-color: var(--root-white-color);
-  --button-border-radius: var(--root-button-border-radius);
-
-  --button-hover-color: var(--root-primary-color);
-  --button-hover-background-color: var(--root-primary-color-3);
-  --button-disabled-background-color: var(--root-primary-color);
-  --button-disabled-color: var(--root-white-color);
 }
