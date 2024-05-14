@@ -45,21 +45,6 @@
   --webform-page-title-underline-color: var(--root-primary-color);
   --webform-page-title-underline-display: none;
 
-  /******** markdown ********/
-  .anvil-markdown strong {
-    font-weight: 500;
-    font-style: normal;
-  }
-
-  .anvil-markdown ul {
-    list-style-type: square;
-  }
-
-  .anvil-markdown ol {
-    list-style-type: decimal;
-  }
-  
-
   /******** button ********/
   --button-background-color: var(--root-primary-color);
   --button-color: var(--root-white-color);
@@ -125,10 +110,16 @@
   --loading-spinner-size: 24px;
   --loading-spinner-thickness: 2px;
 
-  /******** option field (checkboxes and radios) ********/
-  --option-field-checked-background: var(--root-primary-color);
-  /* --option-field-checked-border: 1px solid var(--root-primary-color); */
-  --option-field-checked-border-color: var(--root-primary-color);
+  /******** checkboxes ********/
+  --checkbox-checked-background: var(--root-primary-color);
+  /* --checkbox-checked-border: 1px solid var(--root-primary-color); */
+  --checkbox-checked-border-color: var(--root-primary-color);
+
+  --checkbox-check-hover-border: 2px solid red;
+  --checkbox-border-radius: 50%;
+  /* --option-field-uncheck-hover-border: 1px solid var(--root-primary-color-4); */
+
+  
 }
 
 html ::selection,
@@ -139,4 +130,30 @@ body ::selection {
 
 body {
   font-family: var(--root-font-family);
+
+  .anvil-markdown strong {
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .anvil-markdown ul {
+    list-style-type: square;
+  }
+
+  .anvil-markdown ol {
+    list-style-type: decimal;
+  }
+
+  .anvil-webform-step-bar {
+    display: none;
+  }
+
+  .anvil-field-content-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .anvil-field-content-container .anvil-field-help-label {
+    order: 2;
+  }
 }
