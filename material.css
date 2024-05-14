@@ -50,6 +50,24 @@
   --field-input-focus-border-color: var(--root-primary-color);
   --field-input-focus-box-shadow: none;
 
+  /******** dropdown selector: the same as field inputs, but for dropdowns ********/
+  --dropdown-selector-background-color: transparent;
+  --dropdown-selector-border: none;
+  --dropdown-selector-border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  --dropdown-selector-hover-border-color: var(--root-primary-color);
+  --dropdown-selector-focus-border-color: var(--root-primary-color);
+  --dropdown-selector-focus-box-shadow: none;
+  
+  /******** dropdown ********/
+  --dropdown-option-active-background-color: var(--root-primary-color-4);
+  --dropdown-menu-background-color: var(--root-white-color);
+  --dropdown-menu-color: var(--root-black-color);
+  --dropdown-placeholder-background-color: var(--root-primary-color-3);
+  --dropdown-placeholder-color: var(--root-black-color);
+  --dropdown-placeholder-active-color: var(--root-black-color);
+  --dropdown-placeholder-font-style: italic;
+  --dropdown-placeholder-font-weight: 400;
+
   /******** date picker ********/
   --date-picker-hover-background: var(--root-primary-color-4);
   --date-picker-today-hover-background: var(--root-primary-color);
