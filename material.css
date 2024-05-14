@@ -12,7 +12,7 @@
   --root-error-color: #e55252;
   --root-black-color: #222;
   --root-white-color: #fff;
-  --root-link-color: #0185A2;
+  --root-link-color: #0185a2;
   --root-link-hover-color: #00a298;
 
   /******** typography ********/
@@ -31,6 +31,35 @@
   font-weight: var(--root-font-weight-normal);
   color: var(--root-black-color);
 
+  /******** webform titles ********/
+  --webform-title-color: var(--root-black-color);
+  --webform-title-font-weight: 500;
+  --webform-title-font-style: normal;
+  --webform-title-font-size: 32px;
+  --webform-title-display: none;
+
+  --webform-page-title-color: var(--root-black-color);
+  --webform-page-title-font-weight: 300;
+  --webform-page-title-font-style: normal;
+  --webform-page-title-font-size: 24px;
+  --webform-page-title-underline-color: var(--root-primary-color);
+  --webform-page-title-underline-display: none;
+
+  /******** markdown ********/
+  .anvil-markdown strong {
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .anvil-markdown ul {
+    list-style-type: square;
+  }
+
+  .anvil-markdown ol {
+    list-style-type: decimal;
+  }
+  
+
   /******** button ********/
   --button-background-color: var(--root-primary-color);
   --button-color: var(--root-white-color);
@@ -43,6 +72,7 @@
 
   /******** fields ********/
   --field-error-color: var(--root-error-color);
+  /* TODO: add help, label, optional vars */
 
   /******** field inputs ********/
   --field-input-background-color: transparent;
@@ -96,7 +126,9 @@
   --loading-spinner-thickness: 2px;
 
   /******** option field (checkboxes and radios) ********/
-  --option-field-checked-background: var(var(--root-primary-color));
+  --option-field-checked-background: var(--root-primary-color);
+  /* --option-field-checked-border: 1px solid var(--root-primary-color); */
+  --option-field-checked-border-color: var(--root-primary-color);
 }
 
 html ::selection,
