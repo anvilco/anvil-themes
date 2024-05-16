@@ -33,6 +33,9 @@
   font-weight: var(--root-font-weight-normal);
   color: var(--root-black-color);
 
+  /******** webforms ********/
+  --webform-background: var(--root-white-color);
+
   /******** webform titles ********/
   --webform-title-color: var(--root-black-color);
   --webform-title-font-weight: 500;
@@ -43,7 +46,7 @@
   --webform-page-title-color: var(--root-black-color);
   --webform-page-title-font-weight: 300;
   --webform-page-title-font-style: normal;
-  --webform-page-title-font-size: 24px;
+  --webform-page-title-font-size: 28px;
   --webform-page-title-underline-color: var(--root-primary-color);
   --webform-page-title-underline-display: none;
 
@@ -143,6 +146,33 @@
   --checkbox-check-hover-border: 2px solid red;
   --checkbox-border-radius: 50%;
   /* --option-field-uncheck-hover-border: 1px solid var(--root-primary-color-4); */
+
+  /******** content card ********/
+  --content-card-background: transparent;
+  --content-card-box-shadow: none;
+  --content-card-padding: 0;
+  --content-card-margin-bottom: 40px;
+  --content-list-item-hover-border-color: var(--root-primary-color);
+  --content-title-font-size: 20px;
+  --content-title-font-weight: 500;
+
+
+  /*************************************/
+  /******** webform review page ********/
+  /*************************************/
+
+  /******** review data card ********/
+  --review-data-card-edit-button-color: var(--root-link-color);
+  --review-data-card-edit-button-hover-color: var(--root-link-hover-color);
+  --review-data-card-empty-value-required-border-left: none;
+  --review-data-card-empty-value-required-border-bottom: 2px solid var(--root-error-color);
+  --review-data-card-value-empty-required-hover-color: var(--root-error-color);
+  --review-data-card-empty-value-font-style: italic;
+  --review-data-card-value-label-color: var(--root-black-color);
+  --review-data-card-value-label-hover-color: var(--root-primary-color);
+  --review-data-card-item-edit-link-color: var(--root-primary-color);
+
+  /* --review-data-card-empty-value-required-border-color: var(--root-error-color); */
 }
 
 html ::selection,
@@ -197,5 +227,26 @@ body {
   .anvil-dropzone-upload-button:hover {
     color: var(--root-white-color);
     background-color: var(--root-primary-color);
+  }
+
+  .anvil-radio-buttons {
+    --button-background-color: var(--root-primary-color-3);
+    --button-color: var(--root-primary-color);
+    --button-border-radius: var(--root-button-border-radius);
+    --button-border: 2px solid var(--root-primary-color-4);
+
+    --button-hover-color: var(--root-white-color);
+    --button-hover-background-color: var(--root-primary-color);
+    --button-hover-border-color: var(--root-primary-color-3);
+    --button-disabled-background-color: var(--root-primary-color);
+    --button-disabled-color: var(--root-white-color);
+  }
+
+  .anvil-radio-buttons .anvil-radio-buttons-clear-button {
+    color: var(--root-primary-color-4);
+
+    :hover {
+      color: var(--root-primary-color);
+    }
   }
 }
