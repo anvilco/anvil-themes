@@ -80,15 +80,6 @@
   --field-input-padding-x: 0;
   /* padding-y is not supported right now - use selectors to target elements you want for padding top/bottom */
 
-  /******** dropdown selector: the same as field inputs, but for dropdowns ********/
-  --dropdown-selector-background-color: transparent;
-  --dropdown-selector-border: none;
-  --dropdown-selector-border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  --dropdown-selector-hover-border-color: var(--root-primary-color);
-  --dropdown-selector-focus-border-color: var(--root-primary-color);
-  --dropdown-selector-focus-box-shadow: none;
-  --dropdown-selector-padding-x: 0;
-
   /******** dropdown ********/
   --dropdown-option-active-background-color: var(--root-primary-color-4);
   --dropdown-menu-background-color: var(--root-white-color);
