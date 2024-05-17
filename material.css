@@ -16,6 +16,8 @@
   --root-link-hover-color: #00a298;
   --root-green-color: #2ed27c;
   --root-green-color-4: rgba(46, 210, 124, 0.4);
+  --root-disabled-color: #d9d9d9;
+  --root-disabled-background-color: #f5f5f5;
 
   /******** typography ********/
   --root-font-family: "Roboto", sans-serif;
@@ -140,11 +142,11 @@
 
   /******** checkboxes ********/
   --checkbox-checked-background: var(--root-primary-color);
-  /* --checkbox-checked-border: 1px solid var(--root-primary-color); */
   --checkbox-checked-border-color: var(--root-primary-color);
-
-  --checkbox-check-hover-border: 2px solid red;
-  --checkbox-border-radius: 50%;
+  --checkbox-check-hover-border: 2px solid var(--root-black-color);
+  
+  /* --checkbox-checked-border: 1px solid var(--root-primary-color); */
+  /* --checkbox-border-radius: 50%; */
   /* --option-field-uncheck-hover-border: 1px solid var(--root-primary-color-4); */
 
   /******** radio buttons ********/
@@ -251,5 +253,39 @@ body {
     :hover {
       color: var(--root-primary-color);
     }
+  }
+
+  .anvil-array-input .anvil-circle-icon-button-icon {
+    background-color: var(--root-primary-color-4) !important;
+    color: var(--root-primary-color);
+  }
+
+  .anvil-array-input .anvil-circle-icon-button:hover .anvil-circle-icon-button-icon {
+    background-color: var(--root-primary-color) !important;
+    color: var(--root-white-color);
+  }
+
+  .anvil-array-input[disabled] .anvil-circle-icon-button-icon {
+    background-color: var(--root-disabled-background-color) !important;
+    color: var(--root-disabled-color);
+  }
+
+  .anvil-array-input .anvil-circle-icon-button-text {
+    color: var(--root-black-color);
+    font-weight: 300;
+  }
+
+  .anvil-array-input .anvil-circle-icon-button:hover .anvil-circle-icon-button-text {
+    color: var(--root-primary-color);
+    font-weight: 500;
+  }
+
+  .anvil-array-input[disabled] .anvil-circle-icon-button-text {
+    color: var(--root-disabled-color);
+  }
+
+  .anvil-array-input-item-number {
+    background: var(--root-primary-color-3);
+    color: var(--root-primary-color);
   }
 }
