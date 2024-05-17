@@ -144,7 +144,7 @@
   --checkbox-checked-background: var(--root-primary-color);
   --checkbox-checked-border-color: var(--root-primary-color);
   --checkbox-check-hover-border: 2px solid var(--root-black-color);
-  
+
   /* --checkbox-checked-border: 1px solid var(--root-primary-color); */
   /* --checkbox-border-radius: 50%; */
   /* --option-field-uncheck-hover-border: 1px solid var(--root-primary-color-4); */
@@ -192,100 +192,118 @@ body ::selection {
 
 body {
   font-family: var(--root-font-family);
+}
 
-  .anvil-markdown strong {
-    font-weight: 500;
-    font-style: normal;
-  }
+/* double the class increases specificity */
+.anvil-webform-save-and-continue.anvil-webform-save-and-continue {
+  display: none;
+}
 
-  .anvil-markdown ul {
-    list-style-type: square;
-  }
+.anvil-markdown strong {
+  font-weight: 500;
+  font-style: normal;
+}
 
-  .anvil-markdown ol {
-    list-style-type: decimal;
-  }
+.anvil-markdown ul {
+  list-style-type: square;
+}
 
-  .anvil-webform-step-bar {
-    display: none;
-  }
+.anvil-markdown ol {
+  list-style-type: decimal;
+}
 
-  .anvil-field-content-container {
-    display: flex;
-    flex-direction: column;
-  }
+.anvil-webform-step-bar {
+  display: none;
+}
 
-  /* the double .anvil-field-help-label is to increase specificity without using !important */
-  /* we use ant-form-item-has-error to target only error fields. will change to anvil-field-has-error in the future */
-  .ant-form-item-has-error
-    .anvil-field-content-container
-    .anvil-field-help-label {
-    order: 2;
-    position: relative;
-    margin-top: 6px;
-    text-align: left;
-    padding-left: 0;
-    padding-right: 0;
-  }
+.anvil-field-content-container {
+  display: flex;
+  flex-direction: column;
+}
 
-  .anvil-dropzone-upload-button {
-    background-color: var(--root-primary-color-3);
+/* the double .anvil-field-help-label is to increase specificity without using !important */
+/* we use ant-form-item-has-error to target only error fields. will change to anvil-field-has-error in the future */
+.ant-form-item-has-error
+  .anvil-field-content-container
+  .anvil-field-help-label {
+  order: 2;
+  position: relative;
+  margin-top: 6px;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.anvil-dropzone-upload-button {
+  background-color: var(--root-primary-color-3);
+  color: var(--root-primary-color);
+}
+
+.anvil-dropzone-upload-button:hover {
+  color: var(--root-white-color);
+  background-color: var(--root-primary-color);
+}
+
+.anvil-radio-buttons {
+  --button-border-radius: var(--root-button-border-radius);
+  --button-border: 2px solid var(--root-primary-color-4);
+  --button-hover-color: var(--root-white-color);
+  --button-hover-background-color: var(--root-primary-color);
+  --button-hover-border-color: var(--root-primary-color-3);
+  --button-focus-background-color: var(--root-primary-color);
+}
+
+.anvil-radio-buttons .anvil-radio-buttons-clear-button {
+  color: var(--root-primary-color-4);
+
+  :hover {
     color: var(--root-primary-color);
   }
+}
 
-  .anvil-dropzone-upload-button:hover {
-    color: var(--root-white-color);
-    background-color: var(--root-primary-color);
-  }
+.anvil-list-input .anvil-circle-icon-button-icon {
+  background-color: var(--root-primary-color-4) !important;
+  color: var(--root-primary-color);
+}
 
-  .anvil-radio-buttons {
-    --button-border-radius: var(--root-button-border-radius);
-    --button-border: 2px solid var(--root-primary-color-4);
-    --button-hover-color: var(--root-white-color);
-    --button-hover-background-color: var(--root-primary-color);
-    --button-hover-border-color: var(--root-primary-color-3);
-    --button-focus-background-color: var(--root-primary-color);
-  }
+.anvil-list-input
+  .anvil-circle-icon-button:hover
+  .anvil-circle-icon-button-icon {
+  background-color: var(--root-primary-color) !important;
+  color: var(--root-white-color);
+}
 
-  .anvil-radio-buttons .anvil-radio-buttons-clear-button {
-    color: var(--root-primary-color-4);
+.anvil-list-input[disabled] .anvil-circle-icon-button-icon {
+  background-color: var(--root-disabled-background-color) !important;
+  color: var(--root-disabled-color);
+}
 
-    :hover {
-      color: var(--root-primary-color);
-    }
-  }
+.anvil-list-input .anvil-circle-icon-button-text {
+  color: var(--root-black-color);
+  font-weight: 300;
+}
 
-  .anvil-array-input .anvil-circle-icon-button-icon {
-    background-color: var(--root-primary-color-4) !important;
-    color: var(--root-primary-color);
-  }
+.anvil-list-input
+  .anvil-circle-icon-button:hover
+  .anvil-circle-icon-button-text {
+  color: var(--root-primary-color);
+  font-weight: 500;
+}
 
-  .anvil-array-input .anvil-circle-icon-button:hover .anvil-circle-icon-button-icon {
-    background-color: var(--root-primary-color) !important;
-    color: var(--root-white-color);
-  }
+.anvil-list-input[disabled] .anvil-circle-icon-button-text {
+  color: var(--root-disabled-color);
+}
 
-  .anvil-array-input[disabled] .anvil-circle-icon-button-icon {
-    background-color: var(--root-disabled-background-color) !important;
-    color: var(--root-disabled-color);
-  }
+.anvil-list-input-item-number {
+  background: var(--root-primary-color-3);
+  color: var(--root-primary-color);
+}
 
-  .anvil-array-input .anvil-circle-icon-button-text {
-    color: var(--root-black-color);
-    font-weight: 300;
-  }
+.anvil-list-input-item {
+  margin: 20px 0;
+}
 
-  .anvil-array-input .anvil-circle-icon-button:hover .anvil-circle-icon-button-text {
-    color: var(--root-primary-color);
-    font-weight: 500;
-  }
-
-  .anvil-array-input[disabled] .anvil-circle-icon-button-text {
-    color: var(--root-disabled-color);
-  }
-
-  .anvil-array-input-item-number {
-    background: var(--root-primary-color-3);
-    color: var(--root-primary-color);
-  }
+.anvil-list-input-item .anvil-field-label {
+  font-size: 14px;
+  font-style: italic;
 }
