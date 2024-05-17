@@ -147,6 +147,13 @@
   --checkbox-border-radius: 50%;
   /* --option-field-uncheck-hover-border: 1px solid var(--root-primary-color-4); */
 
+  /******** radio buttons ********/
+  --radio-buttons-selected-background-color: var(--root-primary-color);
+  --radio-buttons-selected-color: var(--root-white-color);
+
+  --radio-buttons-unselected-background-color: var(--root-white-color);
+  --radio-buttons-unselected-color: var(--root-primary-color);
+
   /******** content card ********/
   --content-card-background: transparent;
   --content-card-box-shadow: none;
@@ -156,7 +163,6 @@
   --content-title-font-size: 20px;
   --content-title-font-weight: 500;
 
-
   /*************************************/
   /******** webform review page ********/
   /*************************************/
@@ -165,7 +171,8 @@
   --review-data-card-edit-button-color: var(--root-link-color);
   --review-data-card-edit-button-hover-color: var(--root-link-hover-color);
   --review-data-card-empty-value-required-border-left: none;
-  --review-data-card-empty-value-required-border-bottom: 2px solid var(--root-error-color);
+  --review-data-card-empty-value-required-border-bottom: 2px solid
+    var(--root-error-color);
   --review-data-card-value-empty-required-hover-color: var(--root-error-color);
   --review-data-card-empty-value-font-style: italic;
   --review-data-card-value-label-color: var(--root-black-color);
@@ -230,16 +237,12 @@ body {
   }
 
   .anvil-radio-buttons {
-    --button-background-color: var(--root-primary-color-3);
-    --button-color: var(--root-primary-color);
     --button-border-radius: var(--root-button-border-radius);
     --button-border: 2px solid var(--root-primary-color-4);
-
     --button-hover-color: var(--root-white-color);
     --button-hover-background-color: var(--root-primary-color);
     --button-hover-border-color: var(--root-primary-color-3);
-    --button-disabled-background-color: var(--root-primary-color);
-    --button-disabled-color: var(--root-white-color);
+    --button-focus-background-color: var(--root-primary-color);
   }
 
   .anvil-radio-buttons .anvil-radio-buttons-clear-button {
