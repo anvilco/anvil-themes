@@ -35,6 +35,9 @@
   font-weight: var(--root-font-weight-normal);
   color: var(--root-black-color);
 
+  /******** all anvil products - both webforms and esign ********/
+  --all-title-display: none;
+
   /******** webforms ********/
   --webform-background: var(--root-white-color);
 
@@ -43,7 +46,6 @@
   --webform-title-font-weight: 500;
   --webform-title-font-style: normal;
   --webform-title-font-size: 32px;
-  --webform-title-display: none;
 
   --webform-page-title-color: var(--root-black-color);
   --webform-page-title-font-weight: 300;
@@ -59,8 +61,11 @@
 
   --button-hover-color: var(--root-primary-color);
   --button-hover-background-color: var(--root-primary-color-3);
+  --button-focus-color: var(--root-primary-color);
+  --button-focus-background-color: var(--root-primary-color-4);
   --button-disabled-background-color: var(--root-primary-color);
   --button-disabled-color: var(--root-white-color);
+  --button-disabled-icon-color: var(--root-white-color);
 
   /******** fields ********/
   --field-error-color: transparent;
@@ -152,7 +157,6 @@
   --content-card-box-shadow: none;
   --content-card-padding: 0;
   --content-card-margin-bottom: 40px;
-  --content-list-item-hover-border-color: var(--root-primary-color);
   --content-title-font-size: 20px;
   --content-title-font-weight: 500;
 
@@ -171,7 +175,6 @@
   --review-data-card-value-label-color: var(--root-black-color);
   --review-data-card-value-label-hover-color: var(--root-primary-color);
   --review-data-card-item-edit-link-color: var(--root-primary-color);
-
   /* --review-data-card-empty-value-required-border-color: var(--root-error-color); */
 }
 
@@ -183,6 +186,31 @@ body ::selection {
 
 body {
   font-family: var(--root-font-family);
+}
+
+.anvil-webform-review-page {
+  --content-list-item-hover-border-color: var(--root-primary-color);
+}
+
+/* .anvil-esign-page .anvil-circle-icon-button .anvil-circle-icon-button-icon {
+  background-color: var(--root-link-color);
+} */
+
+.anvil-esign-page
+  .anvil-circle-icon-button:hover
+  .anvil-circle-icon-button-icon {
+  background-color: var(--root-link-hover-color);
+}
+
+/* link buttons */
+
+/* link button icons */
+.anvil-button[buttontype="link"] {
+  --button-color: var(--root-link-color);
+}
+
+.anvil-button[buttontype="link"]:hover {
+  --button-hover-color: var(--root-link-hover-color);
 }
 
 /* double the class increases specificity */
@@ -297,4 +325,16 @@ body {
 .anvil-list-input-item .anvil-field-label {
   font-size: 14px;
   font-style: italic;
+}
+
+/* selectors for esign */
+.anvil-circle-icon[type="success"] {
+  --cirlce-icon-background: var(--root-green-color);
+  --circle-icon-color: var(--root-white-color);
+}
+
+.anvil-circle-icon[type="info-alt"],
+.anvil-circle-icon[type="faded"] {
+  --cirlce-icon-background: var(--root-disabled-color);
+  --circle-icon-color: var(--root-white-color);
 }
