@@ -270,6 +270,7 @@ body {
   --button-hover-background-color: var(--root-primary-color);
   --button-hover-border-color: var(--root-primary-color-3);
   --button-focus-background-color: var(--root-primary-color);
+  --button-focus-color: var(--root-white-color);
 }
 
 .anvil-radio-buttons .anvil-radio-buttons-clear-button {
