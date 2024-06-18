@@ -1,97 +1,95 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+/* 
+This is an example theme to be used in Anvil.
+You can get 80% of the way there only using the root variables. Any variables that are commented out are supported in Anvil, but not used in this example.
+For more granular control, you can use the anvil-* classes to target specific elements. Some are used here or commented out for reference.
+For a complete list of supported variables and classes, see the white labeling documentation: https://useanvil.com/docs/api/white-labeling/
+ */
+
 :root {
-  /******** colors ********/
-  --root-primary-color: #00a298;
-
-  /* color scale: 1-9 */
-  --root-primary-color-3: rgba(0, 162, 152, 0.08);
-  --root-primary-color-4: rgba(0, 162, 152, 0.4);
-  --root-primary-color-5: var(--root-primary-color);
-
-  --root-error-color: #e55252;
+  /******** root colors ********/
   --root-black-color: #222;
   --root-white-color: #fff;
+  --root-background: var(--root-white-color);
+  --root-text-color: var(--root-black-color);
+  --root-brand-color: #6002ee;
+  --root-brand-color-10: #b794f6;
+  --root-brand-color-20: #efe5fd;
+  --root-green-color: #2ed27c;
+  --root-green-color-10: rgba(46, 210, 124, 0.4);
+  --root-error-color: #e55252;
+
   --root-link-color: #0185a2;
   --root-link-hover-color: #00a298;
-  --root-green-color: #2ed27c;
-  --root-green-color-4: rgba(46, 210, 124, 0.4);
   --root-disabled-color: #d9d9d9;
   --root-disabled-background-color: #f5f5f5;
 
-  /******** typography ********/
+  /******** root typography ********/
   --root-font-family: "Roboto", sans-serif;
-  --root-font-weight-normal: 300;
+  --root-font-weight: 300;
+  /* --root-title-display: none; */
 
-  /******** buttons ********/
-  --root-button-border-radius: 8px;
-
-  /************************************************
-  ****** apply the root values to components ****** 
-  /************************************************/
-
-  /******** typography ********/
-  font-family: var(--root-font-family);
-  font-weight: var(--root-font-weight-normal);
-  color: var(--root-black-color);
-
-  /******** all anvil products - both webforms and esign ********/
-  --all-title-display: none;
-
-  /******** webforms ********/
-  --webform-background: var(--root-white-color);
+  /******** backgrounds ********/
+  /* --webform-background: <color-value>; */
+  /* --esign-background: <color-value>; */
 
   /******** webform titles ********/
-  --webform-title-color: var(--root-black-color);
+  /* --webform-title-color: <color-value>; */
   --webform-title-font-weight: 500;
   --webform-title-font-style: normal;
   --webform-title-font-size: 32px;
 
-  --webform-page-title-color: var(--root-black-color);
+  /* --webform-page-title-color: <color-value>; */
   --webform-page-title-font-weight: 300;
   --webform-page-title-font-style: normal;
   --webform-page-title-font-size: 28px;
-  --webform-page-title-underline-color: var(--root-primary-color);
-  --webform-page-title-underline-display: none;
+  /* --webform-page-title-underline-color: <color value>; */
+  /* --webform-page-title-underline-display: none; */
 
   /******** button ********/
-  --button-background-color: var(--root-primary-color);
-  --button-color: var(--root-white-color);
-  --button-border-radius: var(--root-button-border-radius);
+  /* --button-background: <color value>; */
+  /* --button-color: <color-value>; */
+  --button-border-radius: 8px;
 
-  --button-hover-color: var(--root-primary-color);
-  --button-hover-background-color: var(--root-primary-color-3);
-  --button-focus-color: var(--root-primary-color);
-  --button-focus-background-color: var(--root-primary-color-4);
-  --button-disabled-background-color: var(--root-primary-color);
-  --button-disabled-color: var(--root-white-color);
-  --button-disabled-icon-color: var(--root-white-color);
+  /* --button-hover-color: <color-value>; */
+  /* --button-hover-background: <color-value>; */
+  /* --button-focus-color: <color-value>; */
+  /* --button-focus-background: <color-value>; */
+  --button-disabled-background: #f5f5f5;
+  --button-disabled-color: #d9d9d9;
+  --button-disabled-icon-color: #d9d9d9;
+
+  /******** circle icons ********/
+  /* --circle-icon-background: <color value>; */
+  --circle-icon-color: var(--root-white-color);
+  --circle-icon-button-background: #b794f6;
 
   /******** fields ********/
-  --field-error-color: transparent;
+  --field-error-background-color: transparent;
   --field-error-text-color: var(--root-error-color);
   --field-error-box-shadow: none;
   --field-error-background: transparent;
   --field-label-font-weight: 300;
-  /* TODO: add help, label, optional vars */
+  /* --field-label-color: var(--root-black-color); */
 
   /******** field inputs ********/
   --field-input-background-color: transparent;
   --field-input-border: none;
   --field-input-border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  --field-input-hover-border-color: var(--root-primary-color);
-  --field-input-focus-border-color: var(--root-primary-color);
+  /* --field-input-hover-border-color: <color value>; */
+  /* --field-input-focus-border-color: <color value>; */
   --field-input-focus-box-shadow: none;
   --field-input-padding-x: 0;
   /* padding-y is not supported right now - use selectors to target elements you want for padding top/bottom */
 
   /******** dropdown ********/
-  --dropdown-option-active-background-color: var(--root-primary-color-4);
+  --dropdown-option-active-background-color: var(--root-brand-color-10);
   --dropdown-menu-background-color: var(--root-white-color);
   --dropdown-menu-color: var(--root-black-color);
   --dropdown-menu-font-weight: 300;
   --dropdown-menu-style: normal;
-  --dropdown-placeholder-background-color: var(--root-primary-color-3);
+  --dropdown-placeholder-background-color: var(--root-brand-color-20);
   --dropdown-placeholder-color: var(--root-black-color);
   --dropdown-placeholder-active-color: var(--root-black-color);
   --dropdown-placeholder-font-style: italic;
@@ -101,26 +99,25 @@
   --date-picker-background: var(--root-white-color);
   --date-picker-color: var(--root-black-color);
   --date-picker-border: none;
-  --date-picker-hover-background: var(--root-primary-color-4);
-  --date-picker-today-hover-background: var(--root-primary-color);
+  --date-picker-hover-background: var(--root-brand-color-10);
+  /* --date-picker-today-hover-background: <color value>; */
   --date-picker-today-hover-color: var(--root-white-color);
   --date-picker-today-border-radius: 0;
   --date-picker-controls-color: var(--root-black-color);
-  --date-picker-controls-hover-color: var(--root-primary-color);
-  --date-picker-footer-button-color: var(var(--root-link-color));
-  --date-picker-footer-button-hover-color: var(var(--root-link-hover-color));
+  /* --date-picker-controls-hover-color: <color-value>; */
+  --date-picker-footer-button-color: var(--root-link-color);
+  --date-picker-footer-button-hover-color: var(--root-link-hover-color);
   --date-picker-footer-button-font-style: italic;
   --date-picker-footer-button-font-weight: 500;
   --date-picker-days-of-week-font-style: italic;
   --date-picker-days-of-week-font-weight: 600;
 
   /******** dropzone ********/
-  --dropzone-border: 2px dashed var(--root-primary-color-4);
-  --dropzone-active-border: 2px dashed var(--root-primary-color);
-  --dropzone-accept-border: 2px dashed var(--root-green-color);
-  --dropzone-accept-background-color: var(--root-green-color-4);
-  --dropzone-reject-border: 2px dashed var(--root-error-color);
-
+  /* --dropzone-border: 2px dashed <color-value>; */
+  /* --dropzone-active-border: 2px dashed <color-value>; */
+  /* --dropzone-accept-border: 2px dashed <color-value>; */
+  /* --dropzone-accept-background: <color-value>; */
+  /* --dropzone-reject-border: 2px dashed <color-value>; */
   --dropzone-error-text-color: var(--root-error-color);
 
   /******** dropzone supported selectors ********/
@@ -132,25 +129,24 @@
   /* - `.anvil-dropzone-drop-disabled` */
 
   /******** loading spinner ********/
-  --loading-spinner-color: var(--root-primary-color);
+  /* --loading-spinner-color: <color value>; */
   --loading-spinner-size: 24px;
   --loading-spinner-thickness: 2px;
 
   /******** checkboxes ********/
-  --checkbox-checked-background: var(--root-primary-color);
-  --checkbox-checked-border-color: var(--root-primary-color);
-  --checkbox-check-hover-border: 2px solid var(--root-black-color);
+  /* --checkbox-checked-background: <color value>; */
+  /* --checkbox-checked-border-color: <color value>; */
+  --checkbox-check-hover-border-color: var(--root-black-color);
 
   /* --checkbox-checked-border: 1px solid var(--root-primary-color); */
   /* --checkbox-border-radius: 50%; */
-  /* --option-field-uncheck-hover-border: 1px solid var(--root-primary-color-4); */
 
   /******** radio buttons ********/
-  --radio-buttons-selected-background-color: var(--root-primary-color);
+  /* --radio-buttons-selected-background: <color value>; */
   --radio-buttons-selected-color: var(--root-white-color);
 
   --radio-buttons-unselected-background-color: var(--root-white-color);
-  --radio-buttons-unselected-color: var(--root-primary-color);
+  /* --radio-buttons-unselected-color: <color value>; */
 
   /******** content card ********/
   --content-card-background: transparent;
@@ -176,16 +172,6 @@
   --review-data-card-value-label-hover-color: var(--root-primary-color);
   --review-data-card-item-edit-link-color: var(--root-primary-color);
   /* --review-data-card-empty-value-required-border-color: var(--root-error-color); */
-}
-
-html ::selection,
-body ::selection {
-  background: var(--root-primary-color) !important;
-  color: var(--root-black-color) !important;
-}
-
-body {
-  font-family: var(--root-font-family);
 }
 
 .anvil-webform-review-page {
@@ -253,44 +239,12 @@ body {
   padding-right: 0;
 }
 
-.anvil-dropzone-upload-button {
-  background-color: var(--root-primary-color-3);
-  color: var(--root-primary-color);
-}
-
-.anvil-dropzone-upload-button:hover {
-  color: var(--root-white-color);
-  background-color: var(--root-primary-color);
-}
-
-.anvil-radio-buttons {
-  --button-border-radius: var(--root-button-border-radius);
-  --button-border: 2px solid var(--root-primary-color-4);
-  --button-hover-color: var(--root-white-color);
-  --button-hover-background-color: var(--root-primary-color);
-  --button-hover-border-color: var(--root-primary-color-3);
-  --button-focus-background-color: var(--root-primary-color);
-  --button-focus-color: var(--root-white-color);
-}
-
 .anvil-radio-buttons .anvil-radio-buttons-clear-button {
-  color: var(--root-primary-color-4);
+  color: var(--root-brand-color-10);
 
   :hover {
     color: var(--root-primary-color);
   }
-}
-
-.anvil-list-input .anvil-circle-icon-button-icon {
-  background-color: var(--root-primary-color-4) !important;
-  color: var(--root-primary-color);
-}
-
-.anvil-list-input
-  .anvil-circle-icon-button:hover
-  .anvil-circle-icon-button-icon {
-  background-color: var(--root-primary-color) !important;
-  color: var(--root-white-color);
 }
 
 .anvil-list-input[disabled] .anvil-circle-icon-button-icon {
@@ -312,11 +266,6 @@ body {
 
 .anvil-list-input[disabled] .anvil-circle-icon-button-text {
   color: var(--root-disabled-color);
-}
-
-.anvil-list-input-item-number {
-  background: var(--root-primary-color-3);
-  color: var(--root-primary-color);
 }
 
 .anvil-list-input-item {
