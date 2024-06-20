@@ -174,16 +174,6 @@ For a complete list of supported variables and classes, see the white labeling d
   /* --review-data-card-edit-button-hover-color: <color-value>; */
 }
 
-/* .anvil-esign-page .anvil-circle-icon-button .anvil-circle-icon-button-icon {
-  background-color: var(--root-link-color);
-} */
-
-.anvil-esign-page
-  .anvil-circle-icon-button:hover
-  .anvil-circle-icon-button-icon {
-  background-color: var(--root-link-hover-color);
-}
-
 .anvil-markdown strong {
   font-weight: 500;
   font-style: normal;
