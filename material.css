@@ -8,7 +8,7 @@ For a complete list of supported variables and classes, see the white labeling d
  */
 
 :root {
-  /******** root colors ********/
+  /******** root colors - sets defaults for everything else that are overrideable ********/
   --root-black-color: #222;
   --root-white-color: #fff;
   --root-background: var(--root-white-color);
@@ -19,11 +19,8 @@ For a complete list of supported variables and classes, see the white labeling d
   --root-green-color: #2ed27c;
   --root-green-color-10: rgba(46, 210, 124, 0.4);
   --root-error-color: #e55252;
-
   --root-link-color: #0185a2;
   --root-link-hover-color: #00a298;
-  --root-disabled-color: #d9d9d9;
-  --root-disabled-background-color: #f5f5f5;
 
   /******** root typography ********/
   --root-font-family: "Roboto", sans-serif;
@@ -35,30 +32,30 @@ For a complete list of supported variables and classes, see the white labeling d
   /* --esign-background: <color-value>; */
 
   /******** webform titles ********/
-  /* --webform-title-color: <color-value>; */
   --webform-title-font-weight: 500;
   --webform-title-font-style: normal;
   --webform-title-font-size: 32px;
-
-  /* --webform-page-title-color: <color-value>; */
   --webform-page-title-font-weight: 300;
   --webform-page-title-font-style: normal;
   --webform-page-title-font-size: 28px;
+
+  /* --webform-title-color: <color-value>; */
   /* --webform-page-title-underline-color: <color value>; */
   /* --webform-page-title-underline-display: none; */
+  /* --webform-page-title-color: <color-value>; */
 
   /******** button ********/
+  --button-border-radius: 8px;
+  --button-disabled-background: #f5f5f5;
+  --button-disabled-color: #d9d9d9;
+
+  /* --button-disabled-icon-color: <color-value>; */
   /* --button-background: <color value>; */
   /* --button-color: <color-value>; */
-  --button-border-radius: 8px;
-
   /* --button-hover-color: <color-value>; */
   /* --button-hover-background: <color-value>; */
   /* --button-focus-color: <color-value>; */
   /* --button-focus-background: <color-value>; */
-  --button-disabled-background: #f5f5f5;
-  --button-disabled-color: #d9d9d9;
-  --button-disabled-icon-color: #d9d9d9;
 
   /******** circle icons ********/
   /* --circle-icon-background: <color-value>; */
@@ -66,51 +63,54 @@ For a complete list of supported variables and classes, see the white labeling d
   /* --circle-icon-button-background: <color-value>; */
 
   /******** fields ********/
-  --field-error-background-color: transparent;
-  --field-error-text-color: var(--root-error-color);
+  --field-label-font-weight: 300;
   --field-error-box-shadow: none;
   --field-error-background: transparent;
-  --field-label-font-weight: 300;
-  /* --field-label-color: var(--root-black-color); */
+
+  /* --field-error-label-background: transparent; */
+  /* --field-error-text-color: <color-value>; */
+  /* --field-label-color: <color-value>; */
 
   /******** field inputs ********/
   --field-input-background-color: transparent;
   --field-input-border: none;
   --field-input-border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  /* --field-input-hover-border-color: <color value>; */
-  /* --field-input-focus-border-color: <color value>; */
   --field-input-focus-box-shadow: none;
   --field-input-padding-x: 0;
+  /* --field-input-hover-border-color: <color value>; */
+  /* --field-input-focus-border-color: <color value>; *
   /* padding-y is not supported right now - use selectors to target elements you want for padding top/bottom */
 
   /******** dropdown ********/
-  --dropdown-option-active-background-color: var(--root-brand-color-10);
-  --dropdown-menu-background-color: var(--root-white-color);
-  --dropdown-menu-color: var(--root-black-color);
   --dropdown-menu-font-weight: 300;
   --dropdown-menu-style: normal;
-  --dropdown-placeholder-background-color: var(--root-brand-color-20);
-  --dropdown-placeholder-color: var(--root-black-color);
-  --dropdown-placeholder-active-color: var(--root-black-color);
   --dropdown-placeholder-font-style: italic;
   --dropdown-placeholder-font-weight: 400;
 
+  /* --dropdown-option-active-background-color: <color-value>; */
+  /* --dropdown-menu-background-color: <color-value>; */
+  /* --dropdown-menu-color: <color-value>; */
+  /* --dropdown-placeholder-background-color: <color-value>; */
+  /* --dropdown-placeholder-color: <color-value>; */
+  /* --dropdown-placeholder-active-color: <color-value>; */
+
   /******** date picker ********/
-  --date-picker-background: var(--root-white-color);
-  --date-picker-color: var(--root-black-color);
   --date-picker-border: none;
-  --date-picker-hover-background: var(--root-brand-color-10);
-  /* --date-picker-today-hover-background: <color value>; */
-  --date-picker-today-hover-color: var(--root-white-color);
   --date-picker-today-border-radius: 0;
-  --date-picker-controls-color: var(--root-black-color);
-  /* --date-picker-controls-hover-color: <color-value>; */
-  --date-picker-footer-button-color: var(--root-link-color);
-  --date-picker-footer-button-hover-color: var(--root-link-hover-color);
   --date-picker-footer-button-font-style: italic;
   --date-picker-footer-button-font-weight: 500;
   --date-picker-days-of-week-font-style: italic;
   --date-picker-days-of-week-font-weight: 600;
+
+  /* --date-picker-footer-button-color: <color-value>; */
+  /* --date-picker-footer-button-hover-color: <color-value>; */
+  /* --date-picker-background: <color-value>; */
+  /* --date-picker-color: <color-value>; */
+  /* --date-picker-hover-background: <color-value>; */
+  /* --date-picker-today-hover-background: <color-value>; */
+  /* --date-picker-today-hover-color: <color-value>; */
+  /* --date-picker-controls-color: <color-value>; */
+  /* --date-picker-controls-hover-color: <color-value>; */
 
   /******** dropzone ********/
   /* --dropzone-border: 2px dashed <color-value>; */
@@ -118,7 +118,7 @@ For a complete list of supported variables and classes, see the white labeling d
   /* --dropzone-accept-border: 2px dashed <color-value>; */
   /* --dropzone-accept-background: <color-value>; */
   /* --dropzone-reject-border: 2px dashed <color-value>; */
-  --dropzone-error-text-color: var(--root-error-color);
+  /* --dropzone-error-text-color: <color-value>; */
 
   /******** dropzone supported selectors ********/
   /* there are more, but these are only on certain drag and drop states */
@@ -129,24 +129,23 @@ For a complete list of supported variables and classes, see the white labeling d
   /* - `.anvil-dropzone-drop-disabled` */
 
   /******** loading spinner ********/
-  /* --loading-spinner-color: <color value>; */
+  /* --loading-spinner-color: <color-value>; */
   --loading-spinner-size: 24px;
   --loading-spinner-thickness: 2px;
 
   /******** checkboxes ********/
-  /* --checkbox-checked-background: <color value>; */
-  /* --checkbox-checked-border-color: <color value>; */
-  --checkbox-check-hover-border-color: var(--root-black-color);
+  /* --checkbox-checked-background: <color-value>; */
+  /* --checkbox-checked-border-color: <color-value>; */
+  /* --checkbox-check-hover-border-color: <color-value>; */
 
   /* --checkbox-checked-border: 1px solid var(--root-primary-color); */
   /* --checkbox-border-radius: 50%; */
 
   /******** radio buttons ********/
-  /* --radio-buttons-selected-background: <color value>; */
-  --radio-buttons-selected-color: var(--root-white-color);
-
-  --radio-buttons-unselected-background-color: var(--root-white-color);
-  /* --radio-buttons-unselected-color: <color value>; */
+  /* --radio-buttons-selected-background: <color-value>; */
+  /* --radio-buttons-selected-color: <color-value>; */
+  /* --radio-buttons-unselected-background-color: <color-value>; */
+  /* --radio-buttons-unselected-color: <color-value>; */
 
   /******** content card ********/
   --content-card-background: transparent;
@@ -161,21 +160,18 @@ For a complete list of supported variables and classes, see the white labeling d
   /*************************************/
 
   /******** review data card ********/
-  --review-data-card-edit-button-color: var(--root-link-color);
-  --review-data-card-edit-button-hover-color: var(--root-link-hover-color);
   --review-data-card-empty-value-required-border-left: none;
   --review-data-card-empty-value-required-border-bottom: 2px solid
     var(--root-error-color);
-  --review-data-card-value-empty-required-hover-color: var(--root-error-color);
   --review-data-card-empty-value-font-style: italic;
-  --review-data-card-value-label-color: var(--root-black-color);
-  --review-data-card-value-label-hover-color: var(--root-primary-color);
-  --review-data-card-item-edit-link-color: var(--root-primary-color);
-  /* --review-data-card-empty-value-required-border-color: var(--root-error-color); */
-}
 
-.anvil-webform-review-page {
-  --content-list-item-hover-border-color: var(--root-primary-color);
+  /* --review-data-card-value-empty-required-hover-color: <color-value>; */
+  /* --review-data-card-value-label-color: <color-value>; */
+  /* --review-data-card-value-label-hover-color: <color-value>; */
+  /* --review-data-card-item-edit-link-color: <color-value>; */
+  /* --review-data-card-empty-value-required-border-color: <color-value>; */
+  /* --review-data-card-edit-button-color: <color-value>; */
+  /* --review-data-card-edit-button-hover-color: <color-value>; */
 }
 
 /* .anvil-esign-page .anvil-circle-icon-button .anvil-circle-icon-button-icon {
@@ -186,22 +182,6 @@ For a complete list of supported variables and classes, see the white labeling d
   .anvil-circle-icon-button:hover
   .anvil-circle-icon-button-icon {
   background-color: var(--root-link-hover-color);
-}
-
-/* link buttons */
-
-/* link button icons */
-.anvil-button[buttontype="link"] {
-  --button-color: var(--root-link-color);
-}
-
-.anvil-button[buttontype="link"]:hover {
-  --button-hover-color: var(--root-link-hover-color);
-}
-
-/* double the class increases specificity */
-.anvil-webform-save-and-continue.anvil-webform-save-and-continue {
-  display: none;
 }
 
 .anvil-markdown strong {
@@ -215,10 +195,6 @@ For a complete list of supported variables and classes, see the white labeling d
 
 .anvil-markdown ol {
   list-style-type: decimal;
-}
-
-.anvil-webform-step-bar {
-  display: none;
 }
 
 .anvil-field-content-container {
@@ -239,52 +215,7 @@ For a complete list of supported variables and classes, see the white labeling d
   padding-right: 0;
 }
 
-.anvil-radio-buttons .anvil-radio-buttons-clear-button {
-  color: var(--root-brand-color-10);
-
-  :hover {
-    color: var(--root-primary-color);
-  }
-}
-
-.anvil-list-input[disabled] .anvil-circle-icon-button-icon {
-  background-color: var(--root-disabled-background-color) !important;
-  color: var(--root-disabled-color);
-}
-
-.anvil-list-input .anvil-circle-icon-button-text {
-  color: var(--root-black-color);
-  font-weight: 300;
-}
-
-.anvil-list-input
-  .anvil-circle-icon-button:hover
-  .anvil-circle-icon-button-text {
-  color: var(--root-primary-color);
-  font-weight: 500;
-}
-
-.anvil-list-input[disabled] .anvil-circle-icon-button-text {
-  color: var(--root-disabled-color);
-}
-
-.anvil-list-input-item {
-  margin: 20px 0;
-}
-
 .anvil-list-input-item .anvil-field-label {
   font-size: 14px;
   font-style: italic;
-}
-
-/* selectors for esign */
-.anvil-circle-icon[type="success"] {
-  --cirlce-icon-background: var(--root-green-color);
-  --circle-icon-color: var(--root-white-color);
-}
-
-.anvil-circle-icon[type="info-alt"],
-.anvil-circle-icon[type="faded"] {
-  --cirlce-icon-background: var(--root-disabled-color);
-  --circle-icon-color: var(--root-white-color);
 }
