@@ -192,7 +192,6 @@ For a complete list of supported variables and classes, see the white labeling d
   flex-direction: column;
 }
 
-/* the double .anvil-field-help-label is to increase specificity without using !important */
 /* we use ant-form-item-has-error to target only error fields. will change to anvil-field-has-error in the future */
 .ant-form-item-has-error
   .anvil-field-content-container
